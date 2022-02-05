@@ -1,33 +1,35 @@
-import { Link } from "@mui/material";
 import React, { useState } from "react";
-import { Route,Navigate, Router } from "react-router-dom";
+import { Route,Navigate, Router,Link } from "react-router-dom";
 import "./register.css";
 const LoginRegister = () => {
   const [addclass, setaddclass] = useState("");
-  const [userEmail,setUserEmail]= useState('');
-  const [userPassword,setUserPassword]= useState('');
+  const [userEmail,setEmail]= useState('');
+  const [userPassword,setPassword]= useState('');
+  const [userCity,setCity]= useState('');
+  const [userName,setName]= useState('');
 
-  const redirect=()=>{
-<Link to="/restraunt">register</Link>
-    console.log("whatup")
+  const redirect=(e)=>{
+    console.log(userName," ",userCity," ",userEmail," ",userPassword);
   }
   return (
     <div className={`container ${addclass}`} id="container">
       <div className="form-container  sign-up-container">
         <form>
           <h1>Bussiness Account</h1>
-          <input type="text" placeholder="RESTAURANT NAME" />
-          <input type="email" placeholder="EMAIL" />
-          <input type="text" placeholder="CITY" />
-          <input type="password" placeholder="PASSWORD" />
-          <button type="submit" onClick={redirect}>REGISTER</button>
+          <input type="text" placeholder="RESTAURANT NAME" onChange={e=>{setName(e.target.value)}} />
+          <input type="email" placeholder="EMAIL" onChange={e=>{setEmail(e.target.value)}} />
+          <input type="text" placeholder="CITY" onChange={e=>{setCity(e.target.value)}} />
+          <input type="password" placeholder="PASSWORD" onChange={e=>{setPassword(e.target.value)}} />
+          <Link to='/restraunt'><button type="submit" onClick={redirect}>REGISTER</button></Link>
         </form>
       </div>
       <div className="form-container sign-in-container">
         <form>
           <h1>Customer Account</h1>
-          <input type="email" placeholder="EMAIL" onChange={(e)=>setUserEmail(e.target.value)} value={userEmail} />
-          <input type="password" placeholder="PASSWORD" onChange={(e)=>{setUserPassword(e.target.value); console.log({userPassword})}} value={userPassword}/>
+          <input type="text" placeholder="NAME" onChange={e=>{setName(e.target.value)}} />
+          <input type="email" placeholder="EMAIL"  onChange={(e)=>setEmail(e.target.value)} />
+          <input type="text" placeholder="CITY" onChange={e=>{setCity(e.target.value)}} />
+          <input type="password" placeholder="PASSWORD" onChange={(e)=>{setPassword(e.target.value)}}/>
           <button type="submit" onClick={redirect}>SignUp</button>
         </form>
       </div>
