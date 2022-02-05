@@ -4,6 +4,7 @@ const useFetch=(url)=>{
     const[menu,setMenu]=useState(null);
     const[isPending,setIsPending]=useState(true);
     const[error,setError]=useState();
+    const NAME=localStorage.getItem("name");
     useEffect(()=>{
         const abortControl=new AbortController();
         setTimeout(()=>{
@@ -13,7 +14,7 @@ const useFetch=(url)=>{
                 return res.json();
             })
             .then(data=>{
-                const req=data.find(({id})=>id==="kfc");
+                const req=data.find(({id})=>id===NAME);
                 setMenu(req);
                 setIsPending(false);
                 setError(null);

@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import { Route,Navigate, Router,Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./register.css";
+import { saveCache } from "../saveCache";
 const LoginRegister = () => {
   const [addclass, setaddclass] = useState("");
   const [userEmail,setEmail]= useState('');
   const [userPassword,setPassword]= useState('');
   const [userCity,setCity]= useState('');
   const [userName,setName]= useState('');
+  // const [isRestraunt,setRest]=useState(false);
 
-  const redirect=(e)=>{
-    console.log(userName," ",userCity," ",userEmail," ",userPassword);
+  const redirect=()=>{
+    localStorage.setItem("name",userName);
+    localStorage.setItem("email",userEmail);
+    localStorage.setItem("city",userCity);
+    console.log(userName,userEmail,userCity);
   }
   return (
     <div className={`container ${addclass}`} id="container">
@@ -20,7 +25,7 @@ const LoginRegister = () => {
           <input type="email" placeholder="EMAIL" onChange={e=>{setEmail(e.target.value)}} />
           <input type="text" placeholder="CITY" onChange={e=>{setCity(e.target.value)}} />
           <input type="password" placeholder="PASSWORD" onChange={e=>{setPassword(e.target.value)}} />
-          <Link to='/restraunt'><button type="submit" onClick={redirect}>REGISTER</button></Link>
+          <Link to='/restraunt'><button type="submit"  onClick={redirect}>REGISTER</button></Link>
         </form>
       </div>
       <div className="form-container sign-in-container">

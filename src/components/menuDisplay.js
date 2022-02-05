@@ -3,7 +3,7 @@ const MENU=({menu})=>{
     return(
         
         <div className="menu-layout">
-            <h2>Menu Item of {menu.name} Restraunt:</h2>
+            <h2>Menu Item of {localStorage.getItem("name")} Restraunt:</h2>
             {
                 menu.items.map((post,key) =>{   
                     return(
