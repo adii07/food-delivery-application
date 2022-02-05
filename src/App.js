@@ -6,8 +6,6 @@ import DashBoard from './components/resDashBoard';
 
 function App() {
   return (
-    <div>
-    <Navbar/>
     <Router>
       <div className="App">
         <Routes>
@@ -16,7 +14,6 @@ function App() {
         </Routes>
       </div>
     </Router>
-    </div>
   );
 }
 

@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
-import { saveCache } from "../saveCache";
 const LoginRegister = () => {
   const [addclass, setaddclass] = useState("");
   const [userEmail,setEmail]= useState('');
-  const [userPassword,setPassword]= useState('');
   const [userCity,setCity]= useState('');
   const [userName,setName]= useState('');
-  // const [isRestraunt,setRest]=useState(false);
+  const [isRestraunt,setRest]=useState(false);
 
-  const redirect=()=>{
+  const redirect=(e)=>{
     localStorage.setItem("name",userName);
     localStorage.setItem("email",userEmail);
     localStorage.setItem("city",userCity);
+    localStorage.setItem("isRestraunt",isRestraunt);
     console.log(userName,userEmail,userCity);
   }
   return (
@@ -24,7 +23,7 @@ const LoginRegister = () => {
           <input type="text" placeholder="RESTAURANT NAME" onChange={e=>{setName(e.target.value)}} />
           <input type="email" placeholder="EMAIL" onChange={e=>{setEmail(e.target.value)}} />
           <input type="text" placeholder="CITY" onChange={e=>{setCity(e.target.value)}} />
-          <input type="password" placeholder="PASSWORD" onChange={e=>{setPassword(e.target.value)}} />
+          <input type="password" placeholder="PASSWORD" onChange={e=>{setRest(true)}} />
           <Link to='/restraunt'><button type="submit"  onClick={redirect}>REGISTER</button></Link>
         </form>
       </div>
@@ -34,7 +33,7 @@ const LoginRegister = () => {
           <input type="text" placeholder="NAME" onChange={e=>{setName(e.target.value)}} />
           <input type="email" placeholder="EMAIL"  onChange={(e)=>setEmail(e.target.value)} />
           <input type="text" placeholder="CITY" onChange={e=>{setCity(e.target.value)}} />
-          <input type="password" placeholder="PASSWORD" onChange={(e)=>{setPassword(e.target.value)}}/>
+          <input type="password" placeholder="PASSWORD" onChange={e=>{setRest(false)}}/>
           <button type="submit" onClick={redirect}>SignUp</button>
         </form>
       </div>

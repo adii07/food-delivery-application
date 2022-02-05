@@ -4,6 +4,7 @@ import { TextField,Button} from "@mui/material";
 import {useState } from "react";
 import useFetch from './useFetch';
 import Navbar from './navbar';
+import addItems from './addItem';
 
 
 const DashBoard=()=>{
@@ -15,6 +16,7 @@ const DashBoard=()=>{
         if(foodPrice==='' || foodItem==='') return;
         console.log(foodItem);
         console.log(foodPrice);
+        addItems({foodItem,foodPrice});
     }
     
     return(
