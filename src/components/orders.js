@@ -1,9 +1,15 @@
-import { useEffect,useState } from "react";
+import'./menu.css'
+import { useEffect, useState } from "react";
+import Navbar from './navbar';
 
-const useFetch=(url)=>{
+const ORDERS=()=>{
+    const NAME=localStorage.getItem("name");
+    const url='http://localhost:8000/orders?restoname='+NAME;
+
     const[menu,setMenu]=useState(null);
     const[isPending,setIsPending]=useState(true);
     const[error,setError]=useState();
+
     useEffect(()=>{
         const abortControl=new AbortController();
         setTimeout(()=>{
@@ -13,7 +19,6 @@ const useFetch=(url)=>{
                 return res.json();
             })
             .then(data=>{
-                // const req=data.find(({name})=>name===NAME);
                 const req=data;
                 console.log(data);
                 setMenu(req);
@@ -32,6 +37,28 @@ const useFetch=(url)=>{
     return()=>{abortControl.abort();}
     },[url]);
 
-    return {menu,isPending,error};
+    return(
+        <div>
+            <Navbar/>
+        <div className="orders-container">
+            <h1>Orders:</h1>
+            <hr/>
+            {
+               menu && menu.map((item,key)=>{
+                    return(
+                    <div className="order-list" key={key+1}>
+                    <div className="order-item">{key+1}.</div>
+                    <div className="order-item">₹{item.cost}</div> 
+                    {
+                        item.Items.map((i,k)=>(<div key={k} className='order-item'>{i}</div>))
+                    }
+                    </div>)
+                })
+            }
+        </div>
+        </div>
+    );
+
 }
-export default useFetch;
+
+export default ORDERS;

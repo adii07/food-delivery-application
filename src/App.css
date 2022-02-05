@@ -10,6 +10,21 @@ body{
     right: 0;
     width: 100%;
     height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #001436;
     color: white;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+}
+.nav-links strong{
+    color: white;
+    padding: 2rem;
+}
+
+.nav-links :hover{
+    transform: scale(1.2);
 }

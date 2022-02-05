@@ -32,32 +32,131 @@
           "foodItem": "pizza",
           "cost": 100
         }
-        
       ]
     },
     {
       "id": "mac",
       "name": "mac",
       "city": "Delhi",
-      "items": [
-        
-      ]
+      "items": []
     }
   ],
-  "items":[
-    { "id": 1, "name": "Donuts", "cost": 100 ,"by":"Dawaat"},
-    { "id": 2, "name": "Pizza", "cost": 200  ,"by":"Dawaat"},
-    { "id": 3, "name": "Sushi", "cost": 300 ,"by":"Dawaat"},
-    {"id":4,"name": "biryani","cost": 500,"by":"Dawaat"},
-    {"id":5,"name": "Pasta","cost": 500,"by":"Cafe"},
-    {"id":6,"name": "Pesto","cost": 500,"by":"Cafe"},
-    {"id":7,"name": "Sandwich","cost": 500,"by":"Cafe"},
-    {"id":8,"name": "Fied Chicken","cost": 500,"by":"KFC"},
-    {"id":9,"name": "Chicken wings","cost": 500,"by":"KFC"}
+  "items": [
+    {
+      "id": 1,
+      "name": "Donuts",
+      "cost": 100,
+      "by": "Dawaat"
+    },
+    {
+      "id": 2,
+      "name": "Pizza",
+      "cost": 200,
+      "by": "Dawaat"
+    },
+    {
+      "id": 3,
+      "name": "Sushi",
+      "cost": 300,
+      "by": "Dawaat"
+    },
+    {
+      "id": 4,
+      "name": "biryani",
+      "cost": 500,
+      "by": "Dawaat"
+    },
+    {
+      "id": 5,
+      "name": "Pasta",
+      "cost": 500,
+      "by": "Cafe"
+    },
+    {
+      "id": 6,
+      "name": "Pesto",
+      "cost": 500,
+      "by": "Cafe"
+    },
+    {
+      "id": 7,
+      "name": "Sandwich",
+      "cost": 500,
+      "by": "Cafe"
+    },
+    {
+      "id": 8,
+      "name": "Fied Chicken",
+      "cost": 500,
+      "by": "KFC"
+    },
+    {
+      "id": 9,
+      "name": "Chicken wings",
+      "cost": 500,
+      "by": "KFC"
+    },
+    {
+      "name": "pasta",
+      "cost": "200",
+      "by": "Dawaat",
+      "id": 10
+    },
+    {
+      "name": "Waffle",
+      "cost": "250",
+      "by": "Dawaat",
+      "id": 11
+    }
   ],
-  "orders":[
-    { "restoname" :"Indian food",
-      "Items":["Pizza","Sushi"],
-      "cost":500}
+  "orders": [
+    {
+      "restoname": "Dawaat",
+      "Items": [
+        "Pizza",
+        "Sushi"
+      ],
+      "cost": 500
+    },
+    {
+      "restoname": "Dawaat",
+      "Items": [
+        "Pasta",
+        "Sandwich"
+      ],
+      "cost": 500
+    },{
+      "restoname": "Dawaat",
+      "Items": [
+        "Sushi"
+      ],
+      "cost": 500
+    },{
+      "restoname": "Dawaat",
+      "Items": [
+        "Pizza"
+      ],
+      "cost": 500
+    },
+    {
+      "restoname": "Dawaat",
+      "Items": [
+        "Pasta",
+        "Sandwich"
+      ],
+      "cost": 500
+    },{
+      "restoname": "Dawaat",
+      "Items": [
+        "Sushi"
+      ],
+      "cost": 500
+    },{
+      "restoname": "Dawaat",
+      "Items": [
+        "Pizza"
+      ],
+      "cost": 500
+    }
   ]
 }
