@@ -1,17 +1,17 @@
 {
   "restraunt": [
     {
-      "id": "DAWAAT",
+      "id": 1,
       "name": "DAWAAT",
       "city": "Delhi"
     },
     {
-      "id": "KFC",
+      "id": 2,
       "name": "KFC",
       "city": "Delhi"
     },
     {
-      "id": "CAFE",
+      "id": 3,
       "name": "mac",
       "city": "Delhi"
     }

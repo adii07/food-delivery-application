@@ -22,7 +22,7 @@ const DashBoard=()=>{
     
     return(
         <div>
-            <Navbar/>
+            <Navbar isRestraunt='0'/>
             <div className="input-container">
                 <TextField id="outlined-basic" label="Item" placeholder="Item Name" variant="outlined" className="item-input" onChange={(e)=>addItem(e.target.value)} onBlur={(e)=>{addItem(e.target.value)}}/>
                 <TextField id="outlined-basic" label="Price" placeholder="Item Price" type='number' className="item-input" onChange={(e)=>addPrice(e.target.value)} onBlur={(e)=>addPrice(e.target.value)} variant="outlined" />
