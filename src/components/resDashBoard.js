@@ -8,9 +8,10 @@ import addItems from './addItem';
 
 
 const DashBoard=()=>{
+    const NAME=localStorage.getItem("name");
     const[foodItem,addItem]=useState("")
     const[foodPrice,addPrice]=useState("")
-    const{menu,isPending,error}=useFetch('http://localhost:8000/restraunt');
+    const{menu,isPending,error}=useFetch('http://localhost:8000/items?by='+NAME);
 
     function addToJson(){
         if(foodPrice==='' || foodItem==='') return;

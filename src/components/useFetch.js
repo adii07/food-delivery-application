@@ -14,7 +14,9 @@ const useFetch=(url)=>{
                 return res.json();
             })
             .then(data=>{
-                const req=data.find(({id})=>id===NAME);
+                // const req=data.find(({name})=>name===NAME);
+                const req=data;
+                console.log(req);
                 setMenu(req);
                 setIsPending(false);
                 setError(null);
