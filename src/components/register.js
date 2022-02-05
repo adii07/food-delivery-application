@@ -1,7 +1,16 @@
+import { Link } from "@mui/material";
 import React, { useState } from "react";
+import { Route,Navigate, Router } from "react-router-dom";
 import "./register.css";
 const LoginRegister = () => {
   const [addclass, setaddclass] = useState("");
+  const [userEmail,setUserEmail]= useState('');
+  const [userPassword,setUserPassword]= useState('');
+
+  const redirect=()=>{
+<Link to="/restraunt">register</Link>
+    console.log("whatup")
+  }
   return (
     <div className={`container ${addclass}`} id="container">
       <div className="form-container  sign-up-container">
@@ -11,15 +20,15 @@ const LoginRegister = () => {
           <input type="email" placeholder="EMAIL" />
           <input type="text" placeholder="CITY" />
           <input type="password" placeholder="PASSWORD" />
-          <button type="submit">REGISTER</button>
+          <button type="submit" onClick={redirect}>REGISTER</button>
         </form>
       </div>
       <div className="form-container sign-in-container">
         <form>
           <h1>Customer Account</h1>
-          <input type="email" placeholder="EMAIL" />
-          <input type="password" placeholder="PASSWORD" />
-          <button type="submit">SignUp</button>
+          <input type="email" placeholder="EMAIL" onChange={(e)=>setUserEmail(e.target.value)} value={userEmail} />
+          <input type="password" placeholder="PASSWORD" onChange={(e)=>{setUserPassword(e.target.value); console.log({userPassword})}} value={userPassword}/>
+          <button type="submit" onClick={redirect}>SignUp</button>
         </form>
       </div>
       <div className="overlay-container">

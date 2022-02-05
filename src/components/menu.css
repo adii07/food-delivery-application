@@ -1,0 +1,18 @@
+.menu-layout{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+    width: 100vh;
+    margin: 2rem;
+    padding: 1.5rem;
+}
+.menu-list{
+    display: flex;
+    margin: auto;
+    width: 800px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}

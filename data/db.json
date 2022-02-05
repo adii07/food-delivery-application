@@ -1,0 +1,39 @@
+
+{"restraunt":[
+    {
+        "id":"Dawaat",
+      "name": "Dawaat",
+      "city": "Delhi",
+      "items":[
+        {"foodItem":"pizza",
+          "cost":100},
+        {"foodItem":"biryani",
+          "cost":500}
+      ]
+    },
+    {
+        "id":"kfc",
+      "name": "kfc",
+      "city": "Delhi",
+      "items":[
+        {"foodItem":"pizza",
+          "cost":100},
+          {"foodItem":"pizza",
+            "cost":100},
+            {"foodItem":"pizza",
+              "cost":100},
+        {"foodItem":"biryani",
+          "cost":500}
+      ]
+    },{
+        "id":"mac",
+      "name": "mac",
+      "city": "Delhi",
+      "items":[
+        {"foodItem":"pizza",
+          "cost":100},
+        {"foodItem":"biryani",
+          "cost":500}
+      ]
+    }
+  ]}
