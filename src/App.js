@@ -1,19 +1,18 @@
-import { Route, Router,BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import './App.css';
 import Register from './components/register';
 import DashBoard from './components/resDashBoard';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Register/>}></Route>
-        <Route path="/restraunt" element={<DashBoard/>}></Route>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Register/>}/>
+          <Route path="/restraunt" element={<DashBoard/>}/>
         </Routes>
-      </BrowserRouter>
-      
-    </div>
+      </div>
+    </Router>
   );
 }
 
