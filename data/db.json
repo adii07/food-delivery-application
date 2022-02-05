@@ -1,44 +1,19 @@
 {
   "restraunt": [
     {
-      "id": "Dawaat",
-      "name": "Dawaat",
-      "city": "Delhi",
-      "items": [
-        {
-          "foodItem": "pizza",
-          "cost": 100
-        },
-        {
-          "foodItem": "biryani",
-          "cost": 500
-        }
-      ]
+      "id": "DAWAAT",
+      "name": "DAWAAT",
+      "city": "Delhi"
     },
     {
-      "id": "kfc",
-      "name": "kfc",
-      "city": "Delhi",
-      "items": [
-        {
-          "foodItem": "pizza",
-          "cost": 100
-        },
-        {
-          "foodItem": "pizza",
-          "cost": 100
-        },
-        {
-          "foodItem": "pizza",
-          "cost": 100
-        }
-      ]
+      "id": "KFC",
+      "name": "KFC",
+      "city": "Delhi"
     },
     {
-      "id": "mac",
+      "id": "CAFE",
       "name": "mac",
-      "city": "Delhi",
-      "items": []
+      "city": "Delhi"
     }
   ],
   "items": [
@@ -46,43 +21,43 @@
       "id": 1,
       "name": "Donuts",
       "cost": 100,
-      "by": "Dawaat"
+      "by": "DAWAAT"
     },
     {
       "id": 2,
       "name": "Pizza",
       "cost": 200,
-      "by": "Dawaat"
+      "by": "DAWAAT"
     },
     {
       "id": 3,
       "name": "Sushi",
       "cost": 300,
-      "by": "Dawaat"
+      "by": "DAWAAT"
     },
     {
       "id": 4,
       "name": "biryani",
       "cost": 500,
-      "by": "Dawaat"
+      "by": "DAWAAT"
     },
     {
       "id": 5,
       "name": "Pasta",
       "cost": 500,
-      "by": "Cafe"
+      "by": "CAFE"
     },
     {
       "id": 6,
       "name": "Pesto",
       "cost": 500,
-      "by": "Cafe"
+      "by": "CAFE"
     },
     {
       "id": 7,
       "name": "Sandwich",
       "cost": 500,
-      "by": "Cafe"
+      "by": "CAFE"
     },
     {
       "id": 8,
@@ -99,19 +74,31 @@
     {
       "name": "pasta",
       "cost": "200",
-      "by": "Dawaat",
+      "by": "DAWAAT",
       "id": 10
     },
     {
       "name": "Waffle",
       "cost": "250",
-      "by": "Dawaat",
+      "by": "DAWAAT",
       "id": 11
+    },
+    {
+      "name": "Salad",
+      "cost": "150",
+      "by": "KFC",
+      "id": 12
+    },
+    {
+      "name": "pasta",
+      "cost": "200",
+      "by": "KFC",
+      "id": 13
     }
   ],
   "orders": [
     {
-      "restoname": "Dawaat",
+      "restoname": "DAWAAT",
       "Items": [
         "Pizza",
         "Sushi"
@@ -119,40 +106,44 @@
       "cost": 500
     },
     {
-      "restoname": "Dawaat",
+      "restoname": "DAWAAT",
       "Items": [
         "Pasta",
         "Sandwich"
       ],
       "cost": 500
-    },{
-      "restoname": "Dawaat",
+    },
+    {
+      "restoname": "DAWAAT",
       "Items": [
         "Sushi"
       ],
       "cost": 500
-    },{
-      "restoname": "Dawaat",
+    },
+    {
+      "restoname": "DAWAAT",
       "Items": [
         "Pizza"
       ],
       "cost": 500
     },
     {
-      "restoname": "Dawaat",
+      "restoname": "DAWAAT",
       "Items": [
         "Pasta",
         "Sandwich"
       ],
       "cost": 500
-    },{
-      "restoname": "Dawaat",
+    },
+    {
+      "restoname": "DAWAAT",
       "Items": [
         "Sushi"
       ],
       "cost": 500
-    },{
-      "restoname": "Dawaat",
+    },
+    {
+      "restoname": "DAWAAT",
       "Items": [
         "Pizza"
       ],

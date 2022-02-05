@@ -1,7 +1,7 @@
 import './dashboard.css'
 import MENU from './menuDisplay';
 import { TextField,Button} from "@mui/material";
-import {useState } from "react";
+import {useEffect, useState } from "react";
 import useFetch from './useFetch';
 import Navbar from './navbar';
 import addItems from './addItem';
@@ -19,7 +19,6 @@ const DashBoard=()=>{
         console.log(foodPrice);
         addItems({foodItem,foodPrice});
     }
-    
     
     return(
         <div>

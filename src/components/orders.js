@@ -20,7 +20,7 @@ const ORDERS=()=>{
             })
             .then(data=>{
                 const req=data;
-                console.log(data);
+                // console.log(data);
                 setMenu(req);
                 setIsPending(false);
                 setError(null);
@@ -42,8 +42,10 @@ const ORDERS=()=>{
             <Navbar/>
         <div className="orders-container">
             <h1>Orders:</h1>
+            {menu===null||menu.length===0?<div>No Orders yet</div>:<hr/>}
             <hr/>
             {
+            
                menu && menu.map((item,key)=>{
                     return(
                     <div className="order-list" key={key+1}>
@@ -54,6 +56,7 @@ const ORDERS=()=>{
                     }
                     </div>)
                 })
+
             }
         </div>
         </div>

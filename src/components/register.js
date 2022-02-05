@@ -9,9 +9,9 @@ const LoginRegister = () => {
   const [isRestraunt,setRest]=useState(false);
 
   const redirect=(e)=>{
-    localStorage.setItem("name",userName);
-    localStorage.setItem("email",userEmail);
-    localStorage.setItem("city",userCity);
+    localStorage.setItem("name",userName.toUpperCase());
+    localStorage.setItem("email",userEmail.toUpperCase());
+    localStorage.setItem("city",userCity.toUpperCase());
     localStorage.setItem("isRestraunt",isRestraunt);
     console.log(userName,userEmail,userCity);
   }

@@ -15,7 +15,7 @@ const useFetch=(url)=>{
             .then(data=>{
                 // const req=data.find(({name})=>name===NAME);
                 const req=data;
-                console.log(data);
+                // console.log(data);
                 setMenu(req);
                 setIsPending(false);
                 setError(null);
@@ -28,7 +28,7 @@ const useFetch=(url)=>{
                     setError(err.message);
                 }
             })
-    },1000);
+    },100);
     return()=>{abortControl.abort();}
     },[url]);
 
