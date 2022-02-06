@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,  } from "react-router-dom";
 import "./register.css";
 const LoginRegister = () => {
   const [addclass, setaddclass] = useState("");
@@ -7,6 +7,7 @@ const LoginRegister = () => {
   const [userCity,setCity]= useState('');
   const [userName,setName]= useState('');
   const [isRestraunt,setRest]=useState(false);
+  let navigate=useNavigate();
 
   const redirect=(e)=>{
     if(userName==='' || userEmail==='' || userCity==='')return;
@@ -14,8 +15,12 @@ const LoginRegister = () => {
     localStorage.setItem("name",userName.toUpperCase());
     localStorage.setItem("email",userEmail.toUpperCase());
     localStorage.setItem("city",userCity.toUpperCase());
-    localStorage.setItem("isRestraunt",isRestraunt);
+    localStorage.setItem("isRestraunt",isRestraunt); 
     console.log(userName,userEmail,userCity);
+  }
+  const navigateToDash=()=>{
+    redirect();
+    navigate('/restraunt');
   }
   return (
     <div className={`container ${addclass}`} id="container">
@@ -26,7 +31,7 @@ const LoginRegister = () => {
           <input type="email" required placeholder="EMAIL" onChange={e=>{setEmail(e.target.value)}} />
           <input type="text" required placeholder="CITY" onChange={e=>{setCity(e.target.value)}} />
           <input type="password" required placeholder="PASSWORD" onChange={e=>{setRest(true)}} />
-         <button type="submit"  onClick={redirect}>REGISTER</button>
+         <button type="submit"  onClick={navigateToDash}>REGISTER</button>
          {/* <Link to='/restraunt'></Link>*/}
         </form>
       </div>

@@ -64,8 +64,20 @@
     color: white;
     background-color: rgb(12, 12, 63);
 }
-.res-list:hover{
+#res-list-ac:hover{
     transform: scale(1.1);
     cursor: pointer;
+    background-color: rgb(3, 3, 85);
+}
+.cart{
+    background-color: beige;
+    color: rgb(12, 12, 63);
+    margin: 0;
+}
+.cart:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.res-list:hover{
     background-color: rgb(3, 3, 85);
 }
