@@ -17,8 +17,14 @@ const DashBoard=()=>{
         if(foodPrice==='' || foodItem==='') return;
         console.log(foodItem);
         console.log(foodPrice);
+        window.location.reload();
         addItems({foodItem,foodPrice});
+        addItem('');
+        addPrice('');
     }
+    useEffect(()=>{
+        addPrice('');
+    },[])
     
     return(
         <div>
